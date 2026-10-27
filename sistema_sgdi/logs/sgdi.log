@@ -1,0 +1,195 @@
+2026-10-27 20:17:34 | INFO    | AUDITORIA | LOGIN_FALHA | usuario=dfghj@masdma.com | Tentativa de login inválida para dfghj@masdma.com
+2026-10-27 20:17:53 | INFO    | AUDITORIA | LOGIN | usuario=Administrador SGDI | Login realizado por Administrador SGDI
+2026-10-27 20:18:35 | INFO    | AUDITORIA | LOGIN | usuario=Administrador SGDI | Login realizado por Administrador SGDI
+2026-10-27 20:18:42 | ERROR   | ERRO | rota=GET /demandas | usuario=Administrador SGDI | ip=127.0.0.1 | TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+Traceback (most recent call last):
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\app.py", line 427, in demandas
+    return render_template(
+        'index.html',
+    ...<8 lines>...
+        resumo_kpis=resumo_kpis
+    )
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\base.html", line 86, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 216, in block 'content'
+    <a href="{{ url_for('demandas', pagina=pagina - 1, **filtros) }}" id="pag-anterior">&laquo; Anterior</a>
+    ^^^^^^^^^^^^^
+TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+2026-10-27 20:19:10 | ERROR   | ERRO | rota=GET /demandas | usuario=Administrador SGDI | ip=127.0.0.1 | TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+Traceback (most recent call last):
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\app.py", line 427, in demandas
+    return render_template(
+        'index.html',
+    ...<8 lines>...
+        resumo_kpis=resumo_kpis
+    )
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\base.html", line 86, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 216, in block 'content'
+    <a href="{{ url_for('demandas', pagina=pagina - 1, **filtros) }}" id="pag-anterior">&laquo; Anterior</a>
+    ^^^^^^^^^^^^^
+TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+2026-10-27 20:19:15 | ERROR   | ERRO | rota=GET /demandas | usuario=Administrador SGDI | ip=127.0.0.1 | TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+Traceback (most recent call last):
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\app.py", line 427, in demandas
+    return render_template(
+        'index.html',
+    ...<8 lines>...
+        resumo_kpis=resumo_kpis
+    )
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\base.html", line 86, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 216, in block 'content'
+    <a href="{{ url_for('demandas', pagina=pagina - 1, **filtros) }}" id="pag-anterior">&laquo; Anterior</a>
+    ^^^^^^^^^^^^^
+TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+2026-10-27 20:22:14 | INFO    | AUDITORIA | LOGIN | usuario=Administrador SGDI | Login realizado por Administrador SGDI
+2026-10-27 20:22:14 | ERROR   | ERRO | rota=GET /demandas | usuario=Administrador SGDI | ip=127.0.0.1 | TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+Traceback (most recent call last):
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\app.py", line 427, in demandas
+    return render_template(
+        'index.html',
+    ...<8 lines>...
+        resumo_kpis=resumo_kpis
+    )
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\base.html", line 86, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 216, in block 'content'
+    <a href="{{ url_for('demandas', pagina=pagina - 1, **filtros) }}" id="pag-anterior">&laquo; Anterior</a>
+    ^^^^^^^^^^^^^
+TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+2026-10-27 20:35:45 | ERROR   | ERRO | rota=GET /demandas | usuario=Administrador SGDI | ip=127.0.0.1 | TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+Traceback (most recent call last):
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\app.py", line 428, in demandas
+    return render_template(
+        'index.html',
+    ...<8 lines>...
+        resumo_kpis=resumo_kpis
+    )
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\base.html", line 86, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\templates\index.html", line 216, in block 'content'
+    <a href="{{ url_for('demandas', pagina=pagina - 1, **filtros) }}" id="pag-anterior">&laquo; Anterior</a>
+    ^^^^^^^^^^^^^
+TypeError: jinja2.runtime.Context.call() got multiple values for keyword argument 'pagina'
+2026-10-27 20:37:26 | INFO    | AUDITORIA | LOGIN | usuario=Administrador SGDI | Login realizado por Administrador SGDI
+2026-10-27 20:39:04 | ERROR   | ERRO | rota=GET /demandas | usuario=Administrador SGDI | ip=127.0.0.1 | NameError: name 'filtros' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Augsuto\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Augsuto\Documents\GitHub\DESAFIO-DE-TECNOLOGIAS-E-INOVACAO\sistema_sgdi\app.py", line 390, in demandas
+    where, parametros = construir_filtro_sql(filtros)
+                                             ^^^^^^^
+NameError: name 'filtros' is not defined

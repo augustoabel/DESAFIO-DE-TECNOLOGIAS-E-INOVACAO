@@ -386,7 +386,7 @@ def exportar_pdf():
 def demandas():
     """Listagem geral de demandas com filtros combinados, busca e paginação."""
     pagina = request.args.get('pagina', 1, type=int)
-    filtros = request.args.to_dict()
+    filtros = {chave: valor for chave, valor in request.args.to_dict().items() if chave != 'pagina' and valor}
 
     where, parametros = construir_filtro_sql(filtros)
 
